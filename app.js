@@ -26,7 +26,7 @@ app.use('/users', usersRouter);
 
 // Route pour récupérer les coordonnées de la ville
 app.get('/coordinates', async (req, res) => {
-  const { city } = req.query;
+  const  city  = req.query.city;
   const apiKey = process.env.OPENCAGE_API_KEY; 
   const apiUrl = `https://api.opencagedata.com/geocode/v1/json?q=${city}&key=${apiKey}`;
 
